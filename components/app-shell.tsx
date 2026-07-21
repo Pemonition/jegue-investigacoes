@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -23,8 +24,15 @@ const nav = [
 function Logo() {
   return (
     <Link href="/" className="group flex items-center gap-3">
-      <span className="relative flex size-11 items-center justify-center rounded-full border border-primary/50 bg-primary/10 brass-frame">
-        <Search className="size-5 text-primary" aria-hidden="true" />
+      <span className="relative flex size-11 shrink-0 items-center justify-center rounded-full">
+        <Image
+          src="/logo-jegue.png"
+          alt="Jegue Investigações"
+          width={44}
+          height={44}
+          className="size-11 object-contain"
+          priority
+        />
       </span>
       <span className="flex flex-col leading-none">
         <span className="font-serif text-lg font-bold tracking-wide text-foreground">
